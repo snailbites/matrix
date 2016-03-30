@@ -13,7 +13,6 @@
 // 
 // --------------------
 
-
 // Transition: Sets transition properties on selector
 // @param: property, duration, style
 @mixin transition($property, $duration, $style: ease) {
@@ -58,10 +57,16 @@
 }
 
 // Functions
-    
+// ...
+
+
+
+// Main Button Definition
+// Primary button is assumed 
 button,  
-a.bh-btn {        
-    padding: .5em .8em;    
+.be-btn {        
+    padding: .3em 1.85em;
+    font-size: .75em;    
     display: inline-block;    
     vertical-align: middle;
     white-space: nowrap;
@@ -83,7 +88,21 @@ a.bh-btn {
         text-decoration: none;
         box-shadow: none;
         outline: none;
-    }    
+    }  
+    
+    // Variations: these are additional classes onto the 
+    // main button styles that modify the component      
+    // ----
+    &-large {
+        padding: .75em 2em;
+    }
+    
+    
+    &-secondary {        
+        border: 1px solid #CCC;
+        
+        @include button-variants($color-black, transparent, transparent);
+    }
 }
 
 
