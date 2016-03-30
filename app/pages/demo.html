@@ -15,8 +15,7 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="../styles/main.css">    
     <!-- endbuild -->
     
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -27,29 +26,43 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="/pages/buttons.html">Buttons</a></li>
-          <li><a href="/pages/links.html">Links</a></li>
-          <li><a href="/pages/typography.html">Typography</a></li>
-        </ul>
-        <h3 class="text-muted">The Matrix</h3>
-      </div>
-
-      <div class="jumbotron">
-        <h1>Style Guide</h1>
-        <p class="lead">The most amazing thing I've ever built</p>
         
-        <p><a class="btn btn-lg btn-success" href="/pages/demo.html">Demo!</a></p>             
-      </div>
+    <header class="navigation">
+        <div class="navigation-logo be-fill-black">              
+          <h1>Behance</h1>
+        </div>
+        <div class="navigation-links">
+            <a class="be-link-large" href="#">Activity</a>
+            <a class="be-link-large" href="#">Discover</a>
+            <a class="be-link-large" href="#">Profile</a>
+            <a class="be-link-large" href="#">Jobs</a>              
+            <a class="be-btn-icon"><i class="icon-cloud"></i>Add Work</a>
+        </div>
+    </header>
       
-      <div class="footer">
-        <p>♥ from me</p>
-      </div>
+    <div role="main">
+        <article>
+          <header>
+            <h2>National Gallery of Denmark - SMK - Asger Jorn</h2>
+            <p class="type-secondary">Graphic Design, Branding</p>
+          </header>
+          
+          <section>
+            <p>SMK - National Gallery of Denmark. For the Asger Jorn - ”Restless Rebel”-exhibition at the National Gallery of Denmark we made an interactive drawing application. It gave museum visitors the possibility to re-enact Jorn’s idea of automatic drawings by drawing what they themselves see in one of Jorn’s original drawings. The experience is available at the museum as an installation and on the web for everyone who’s unable to visit the exhibition at the museum.</p> 
+ 
+            <p>Make a drawing of your own at: jorn.smk.dk. We were responsible for the design, interaction and development of the experience. During the exhibiton an astonishing 2500 drawings were created and saved.</p>
+            
+            <img src="/images/image.jpg" />
+            <img src="/images/image.jpg" />
+            <img src="/images/image.jpg" />
+            <img src="/images/image.jpg" />
+          </section>
+          
+        </article>                
     </div>
+
+    <div class="footer">        
+    </div>    
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -83,7 +96,7 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="../scripts/main.js"></script>
     <!-- endbuild -->
   </body>
 </html>

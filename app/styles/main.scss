@@ -8,9 +8,24 @@ $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "styleguide/styleguide.scss";
-
-
 @import "atoms.scss";
 @import "molecules.scss";
 // endbower
 
+
+
+// Demo styles that use the style guide here
+
+// Navigation
+// ----
+.navigation {    
+}
+.navigation-logo {    
+    display: inline;
+    
+    & > h1 {
+         
+    }
+}
+
+ 

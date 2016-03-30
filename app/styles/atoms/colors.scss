@@ -14,8 +14,6 @@
  $snow: #ffffff;
  $ocean: #0065ff;
  
- 
- 
  // Mapping...
  // TODO: create mapping mixin
  $color-primary: $ocean;
@@ -24,3 +22,12 @@
  $color-white: $snow;
  $color-black: $ash;
  
+ // fills
+ .be-fill {
+     &-black {
+        background-color: $color-black;    
+     }
+     &-white {
+        background-color: $color-white;    
+     }
+ }
