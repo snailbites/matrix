@@ -97,11 +97,26 @@ button,
         padding: .75em 2em;
     }
     
+    &-icon {
+        & > i[class^="icon"] {            
+            height: 16px;
+            width: 16px;
+            display: inline-block;
+            vertical-align: middle;            
+            margin-right: .5em;
+        }
+    }
     
     &-secondary {        
         border: 1px solid #CCC;
-        
+        padding: .3em;
+                
         @include button-variants($color-black, transparent, transparent);
+        
+        & > i[class^="icon"] {
+            margin-right: 0;                  
+        }
+        
     }
 }
 
