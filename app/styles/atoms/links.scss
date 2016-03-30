@@ -1,0 +1,46 @@
+/**
+  * Links
+  *
+  * Colors should have human readable names 
+  * to facilitate communication with design
+  * 
+  */
+      
+a,
+.be-link {
+    color: $color-primary;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+ 
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
+    
+    &:hover {
+        color: darken($color-primary, 10%);
+    }
+    
+    &:active {
+        color: darken($color-primary, 20%);
+    }
+    
+    //
+    // Variations
+    // -----
+    &-large {
+        color: $color-white;
+        
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color-white;
+            border-bottom: 3px solid $color-white;
+        }
+     
+    }
+    
+    
+}
