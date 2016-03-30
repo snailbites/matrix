@@ -89,3 +89,8 @@ body {
     border-bottom: 0;
   }
 }
+
+// spacing for buttons
+button + .bh-btn {
+    margin-left: 10px;
+}

@@ -1,36 +1,89 @@
 /**
+  *
   * Buttons    
+  *
   */
   
-// TODO: find better way to import radius; does it belong in atoms?  
-@import "../atoms/radius.scss";
+// TODO: find a better home for these imports  
+@import "../atoms/units.scss";
 @import "../atoms/colors.scss";
     
-    
+//
+// MIXINS AND FUNCTIONS
+// 
+// --------------------
+
+
+// Transition: Sets transition properties on selector
+// @param: property, duration, style
+@mixin transition($property, $duration, $style: ease) {
+  transition-property: #{$property};
+  transition-duration: $duration;
+  transition-timing-function: $style;
+}
+
+// Button Variants: Creates the button and different states for each button
+// @param: font color, background color, disabled color
+@mixin button-variants($fontColor, $backgroundColor: inherit, $disabledColor: #CCC) {
+  color: $fontColor;
+  background: $backgroundColor;  
+
+  &:hover,
+  &:focus {
+    background: darken($backgroundColor, 10%);    
+    color: darken($fontColor, 10%);
+  }
+
+  &:active {
+    background: darken($backgroundColor, 20%);    
+    color: darken($fontColor, 20%);
+  }
+
+  &:disabled,
+  &-disabled,
+  &[disabled] {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &:active:hover,
+    &.active:hover {
+      background: $disabledColor;      
+      color: $disabledColor;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+}
+
+// Functions
     
 button,  
-a.bh-btn {
-    border-radius: $border-radius-medium;
-    background-color: $color-primary;
-    
-    padding: .5em .8em;
-    display: inline-block;
-    text-align: center;
+a.bh-btn {        
+    padding: .5em .8em;    
+    display: inline-block;    
     vertical-align: middle;
     white-space: nowrap;
     text-transform: capitalize;
     border: 0 none;
+    border-radius: $border-radius-medium;    
     
-    color: $color-white;
+    color: $color-white;  
+    text-align: center;  
 
-    // @include button-variants("transparent", "$colorSecondary-500", "transparent");
-    // @include transition("background, border-color", $transition-duration-normal);
+    @include button-variants($color-white, $color-primary, transparent);
+    @include transition(background, $transition-duration-normal);
 
     &:hover,
     &:focus,
     &:active,
     &:active:focus {
+        cursor: pointer;
+        text-decoration: none;
         box-shadow: none;
         outline: none;
     }    
 }
+
+
