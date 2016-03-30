@@ -1,0 +1,36 @@
+/**
+  * Buttons    
+  */
+  
+// TODO: find better way to import radius; does it belong in atoms?  
+@import "../atoms/radius.scss";
+@import "../atoms/colors.scss";
+    
+    
+    
+button,  
+a.bh-btn {
+    border-radius: $border-radius-medium;
+    background-color: $color-primary;
+    
+    padding: .5em .8em;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-transform: capitalize;
+    border: 0 none;
+    
+    color: $color-white;
+
+    // @include button-variants("transparent", "$colorSecondary-500", "transparent");
+    // @include transition("background, border-color", $transition-duration-normal);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+        box-shadow: none;
+        outline: none;
+    }    
+}

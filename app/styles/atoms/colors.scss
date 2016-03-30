@@ -1,0 +1,26 @@
+/**
+  * Colors
+  *
+  * Colors should have human readable names 
+  * to facilitate communication with design
+  * 
+  */
+ 
+ 
+ // Declare variables here but DO NOT use them explicitly
+ // You should only use the palette colors below 
+   
+ $ash: #191919;
+ $snow: #ffffff;
+ $ocean: #0065ff;
+ 
+ 
+ 
+ // Mapping...
+ // TODO: create mapping mixin
+ $color-primary: $ocean;
+ $color-secondary: $snow;
+ 
+ $color-white: $snow;
+ $color-black: $ash;
+ 

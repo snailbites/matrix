@@ -1,7 +1,16 @@
+/*
+ * This is the main entry point for all of the components
+ * 
+ * 
+ */
+
 $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "styleguide/styleguide.scss";
+
+
 @import "atoms.scss";
+@import "molecules.scss";
 // endbower
 
